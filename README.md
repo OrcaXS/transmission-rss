@@ -1,2 +1,10 @@
 # transmission-rss
-Add magnet links from rss XML feeds.
+A simple Node.js script for adding magnet links from rss XML feeds to Transmission.
+
+Usage
+---
+	node main.js [xml_file] [download_location] [transmission_rpc_url]
+	
+Extra Note
+---
+This is my first Node.js work. Proceed with caution :D
