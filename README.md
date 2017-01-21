@@ -1,5 +1,5 @@
 # transmission-rss
-A simple Node.js script for adding magnet links from rss XML feeds to Transmission.
+A simple Node.js script for adding magnet links from RSS XML feeds to Transmission.
 
 Usage
 ---
