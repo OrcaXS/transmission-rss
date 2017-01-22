@@ -1,7 +1,8 @@
 "use strict";
 const rp = require("request-promise"),
     fs = require("fs"),
-    xml2js = require("xml2js");
+    xml2js = require("xml2js"),
+    validUrl = require("valid-url");
 
 let magnet = {},
     xmlFile = process.argv[2].toString(),
@@ -138,8 +139,15 @@ function* entries(obj) {
 }
 
 function checkArgs() {
-    return (process.argv.length === 5);
+    if (process.argv.length !== 5) {
+        throw new Error("Too many arguments.");
+    } else if (validUrl.isUri(transmissionURI)) {
+        return true;
+    } else {
+        throw new Error("Invalid URI.");
+    }
 }
+
 
 if (checkArgs()) {
     run(function*() {
@@ -158,6 +166,4 @@ if (checkArgs()) {
             yield postRequest(addTorrent, sessionID);
         }
     });
-} else {
-    console.log("Incorrect arguments.");
 }

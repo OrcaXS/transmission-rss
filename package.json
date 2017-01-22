@@ -1,16 +1,31 @@
 {
   "name": "transmission_xml",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A simple Node.js script for adding magnet links from rss XML feeds to Transmission.",
   "main": "main.js",
   "dependencies": {
     "request": "^2.79.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "valid-url": "^1.0.9",
+    "xml2js": "^0.4.17"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "OrcaXS Suen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orcaxs/transmission-rss.git"
+  },
+  "keywords": [
+    "transmission",
+    "rss",
+    "xml"
+  ],
+  "bugs": {
+    "url": "https://github.com/orcaxs/transmission-rss/issues"
+  },
+  "homepage": "https://github.com/orcaxs/transmission-rss#readme"
 }
